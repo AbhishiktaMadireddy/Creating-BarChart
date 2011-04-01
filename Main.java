@@ -22,6 +22,12 @@ public class Main extends PApplet{
         float locationX = 0;
         float locationY = 0;
 
+        //loop to copy the elements in args to dataValues array excludind the first three arguments
+        for(int i = 3; i < args.length; i++){
+             dataValues[i-3] = Float.parseFloat(args[i]);
+
+         }
+
      public static void main(String[] args) {
         //Create an array which will be sent to the PApplet's main function
         //This array should include the arguments from the comand line and
