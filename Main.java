@@ -42,6 +42,19 @@ public class Main extends PApplet{
                 background(205);
                 //smooth edges for the bars, visual refinement
                 smooth();
+                 //loop for setting the x and y coordinates, fill the bars with random colors and draw onto screen
+          for(int i = 0; i < normalisedValues.length; i++){
+
+               locationX = ((barWidth*i) + ((i+1)*5));
+               locationY =  (normalisedValues[i] * maxHeight);
+               colorMode(RGB);
+               stroke(random(255), random(255), random(255));
+               fill(random(255), random(255), random(255));
+               rect(locationX, this.height-locationY, barWidth, (normalisedValues[i] * maxHeight));
+
+          }
+
+    }
      public static void main(String[] args) {
         //Create an array which will be sent to the PApplet's main function
         //This array should include the arguments from the comand line and
