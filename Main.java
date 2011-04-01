@@ -9,7 +9,18 @@ import processing.core.*;
 
 
 public class Main extends PApplet{
-    
+    @Override
+    public void setup(){
+        int windowWidth = Integer.parseInt(args[1]);
+        int windowHeight = Integer.parseInt(args[2]);
+        size(windowWidth, windowHeight);
+        float dataMax = 0;
+        float dataValues[] = new float [args.length-3];
+        float normalisedValues[] = new float [dataValues.length];
+        float barWidth = 0;
+        float maxHeight = windowHeight - 20;
+        float locationX = 0;
+        float locationY = 0;
 
      public static void main(String[] args) {
         //Create an array which will be sent to the PApplet's main function
