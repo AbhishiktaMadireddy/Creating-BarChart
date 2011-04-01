@@ -36,6 +36,12 @@ public class Main extends PApplet{
          for(int i = 0; i< dataValues.length; i++){
             normalisedValues[i] = (dataValues[i]/dataMax);
          }
+        //To calculate the barwidth of the number of bars present
+          barWidth = (((windowWidth-5)/dataValues.length) - 5);
+                System.out.println(barWidth);
+                background(205);
+                //smooth edges for the bars, visual refinement
+                smooth();
      public static void main(String[] args) {
         //Create an array which will be sent to the PApplet's main function
         //This array should include the arguments from the comand line and
