@@ -27,7 +27,11 @@ public class Main extends PApplet{
              dataValues[i-3] = Float.parseFloat(args[i]);
 
          }
-
+        //loop to find the largest value from the arguments given in dataValues array
+        for(int i = 0; i < dataValues.length; i++){
+               if(dataValues[i] > dataMax)
+                 dataMax = dataValues[i];
+         }
      public static void main(String[] args) {
         //Create an array which will be sent to the PApplet's main function
         //This array should include the arguments from the comand line and
