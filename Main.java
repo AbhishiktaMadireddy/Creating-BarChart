@@ -32,6 +32,10 @@ public class Main extends PApplet{
                if(dataValues[i] > dataMax)
                  dataMax = dataValues[i];
          }
+         //loop to find the normalisedvalues by dividing every values with the largest number
+         for(int i = 0; i< dataValues.length; i++){
+            normalisedValues[i] = (dataValues[i]/dataMax);
+         }
      public static void main(String[] args) {
         //Create an array which will be sent to the PApplet's main function
         //This array should include the arguments from the comand line and
